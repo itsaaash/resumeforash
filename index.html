@@ -1,1159 +1,612 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Ashish Ranjan — Community Manager</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #000;
-      --card: #111;
-      --muted: #bbb;
-      --text: #fff;
-      --sub: #ddd;
-      --accent1: #667eea;
-      --accent2: #764ba2;
-      --stroke: #222;
-    }
-    
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    
-    html, body {
-      height: 100%;
-    }
-    
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    
-    .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 16px;
-    }
-    
-    .card {
-      background: var(--card);
-      border: 1px solid var(--stroke);
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
-      margin-bottom: 16px;
-    }
-    
-    .header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-    
-    .avatar {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: linear-gradient(45deg, var(--accent1), var(--accent2));
-      display: grid;
-      place-items: center;
-      font-weight: 700;
-      color: #fff;
-    }
-    
-    h1 {
-      font-size: 22px;
-      line-height: 1.2;
-      margin: 0;
-    }
-    
-    .sub {
-      color: var(--muted);
-      font-size: 14px;
-    }
-    
-    .row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 8px;
-    }
-    
-    .pill {
-      background: linear-gradient(45deg, var(--accent1), var(--accent2));
-      color: #fff;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    
-    .btn {
-      background: linear-gradient(45deg, var(--accent1), var(--accent2));
-      border: none;
-      color: #fff;
-      text-decoration: none;
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-weight: 700;
-      margin-top: 10px;
-    }
-    
-    h2 {
-      font-size: 18px;
-      margin: 0 0 10px 0;
-      padding-bottom: 6px;
-      border-bottom: 2px solid #1f1f1f;
-    }
-    
-    .item {
-      border-left: 3px solid var(--accent1);
-      padding-left: 12px;
-      margin-bottom: 14px;
-    }
-    
-    .title {
-      font-weight: 700;
-    }
-    
-    .meta {
-      color: var(--muted);
-      font-size: 13px;
-      margin: 2px 0 6px;
-    }
-    
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    
-    .tag {
-      background: #1a1a1a;
-      border: 1px solid var(--stroke);
-      padding: 6px 10px;
-      border-radius: 999px;
-    }
-    
-    @media (min-width: 880px) {
-      .grid {
-        display: grid;
-        grid-template-columns: 340px 1fr;
-        gap: 18px;
-      }
-      
-      .sticky {
-        position: sticky;
-        top: 16px;
-        align-self: start;
-      }
-    }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ashish Ranjan — Community Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f0f0f;
+            --card: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            --card-hover: linear-gradient(135deg, #1f1f1f 0%, #323232 100%);
+            --muted: #a1a1aa;
+            --text: #ffffff;
+            --sub: #e4e4e7;
+            --accent1: #6366f1;
+            --accent2: #8b5cf6;
+            --accent3: #06b6d4;
+            --stroke: #27272a;
+            --stroke-light: #3f3f46;
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+            --shadow-lg: 0 35px 60px -12px rgba(0, 0, 0, 0.9);
+            --border-radius: 20px;
+            --border-radius-sm: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--stroke);
+            border-radius: var(--border-radius);
+            padding: 32px;
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+        }
+
+        .card:hover {
+            background: var(--card-hover);
+            border-color: var(--stroke-light);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent1) 0%, var(--accent2) 50%, var(--accent3) 100%);
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            font-size: 24px;
+            color: white;
+            box-shadow: 0 8px 32px rgba(99, 102, 241, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .avatar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            background: linear-gradient(135deg, var(--text) 0%, var(--sub) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .sub {
+            color: var(--muted);
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        .contact-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .pill {
+            background: linear-gradient(135deg, var(--accent1) 0%, var(--accent2) 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            font-size: 14px;
+        }
+
+        .pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .pill.inactive {
+            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+            pointer-events: none;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--accent1) 0%, var(--accent3) 100%);
+            border: none;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 16px 24px;
+            border-radius: var(--border-radius-sm);
+            font-weight: 700;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 35px rgba(6, 182, 212, 0.4);
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            padding-bottom: 12px;
+            border-bottom: 2px solid;
+            border-image: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3)) 1;
+            position: relative;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent1), var(--accent2));
+            border-radius: 2px;
+        }
+
+        .section-content {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .item {
+            border-left: 3px solid var(--accent1);
+            padding-left: 20px;
+            margin-bottom: 24px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(135deg, var(--accent1), var(--accent2));
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+        }
+
+        .item:hover {
+            border-left-color: var(--accent2);
+            padding-left: 24px;
+        }
+
+        .title {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .meta {
+            color: var(--accent3);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .meta::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: var(--accent3);
+            border-radius: 50%;
+        }
+
+        .item p {
+            color: var(--sub);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .tag {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            color: var(--text);
+            padding: 10px 16px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .tag:hover {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+        }
+
+        @media (min-width: 900px) {
+            .grid {
+                display: grid;
+                grid-template-columns: 380px 1fr;
+                gap: 32px;
+            }
+
+            .sticky {
+                position: sticky;
+                top: 24px;
+                align-self: start;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wrap {
+                padding: 16px;
+            }
+
+            .card {
+                padding: 24px;
+                margin-bottom: 20px;
+            }
+
+            .avatar {
+                width: 70px;
+                height: 70px;
+                font-size: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .header {
+                gap: 16px;
+                margin-bottom: 20px;
+            }
+
+            .contact-row {
+                flex-direction: column;
+            }
+
+            .pill {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            .sub {
+                font-size: 14px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .skills {
+                gap: 8px;
+            }
+
+            .tag {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+        }
+
+        /* Loading animation */
+        .card {
+            animation: slideInUp 0.6s ease-out backwards;
+        }
+
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
+        .card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="grid">
-      <aside class="card sticky">
-        <div class="header">
-          <div class="avatar">AR</div>
-          <div>
-            <h1>Ashish Ranjan</h1>
-            <div class="sub">Community Manager • Bihar Sharif, India</div>
-          </div>
+    <div class="wrap">
+        <div class="grid">
+            <aside class="card sticky">
+                <div class="header">
+                    <div class="avatar">AR</div>
+                    <div>
+                        <h1>Ashish Ranjan</h1>
+                        <div class="sub">
+                            <i class="fas fa-users" style="margin-right: 6px; color: var(--accent1);"></i>
+                            Community Manager
+                        </div>
+                        <div class="sub">
+                            <i class="fas fa-map-marker-alt" style="margin-right: 6px; color: var(--accent2);"></i>
+                            Bihar Sharif, India
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-row">
+                    <a class="pill" href="mailto:ve8rix@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </a>
+                    <span class="pill inactive">
+                        <i class="fas fa-star"></i>
+                        Community Expert
+                    </span>
+                </div>
+                
+                <a class="btn" href="https://github.com/itsaaash/resumeforash/raw/refs/heads/main/ac591618.docx" download>
+                    <i class="fas fa-download"></i>
+                    Download CV
+                </a>
+            </aside>
+
+            <main>
+                <section class="card">
+                    <h2><i class="fas fa-user" style="margin-right: 10px; color: var(--accent1);"></i>About Me</h2>
+                    <div class="section-content">
+                        <p>
+                            Dynamic Community Manager with over 5 years of experience fostering engaging gaming communities and driving player satisfaction. 
+                            Managed Discord servers with 15,000+ members and Facebook groups with 200,000+ members. Skilled at bridging players and dev teams, 
+                            running events, and producing clear weekly creator and bug status reports.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2><i class="fas fa-briefcase" style="margin-right: 10px; color: var(--accent1);"></i>Work Experience</h2>
+                    <div class="section-content">
+                        <div class="item">
+                            <div class="title">Community Manager — NetEase Games</div>
+                            <div class="meta">
+                                <i class="fas fa-calendar-alt"></i>
+                                Dec 2017 – Jul 2022
+                            </div>
+                            <p>
+                                Led community for Rules of Survival and Creative Destruction. Oversaw Discord 15k+ and Facebook 200k+ communities. 
+                                Shipped weekly content-creator reports (content types, sentiment, support actions), organized partnered events/tournaments, 
+                                filed bug reports and suggestions, and tracked weekly implementation/fix status for stakeholders.
+                            </p>
+                        </div>
+
+                        <div class="item">
+                            <div class="title">Computer Operator — Mahabodhi Mahavidyalaya, Nalanda</div>
+                            <div class="meta">
+                                <i class="fas fa-calendar-alt"></i>
+                                Dec 2022 – Present
+                            </div>
+                            <p>
+                                Managed IT systems, supported students' digital needs, and streamlined admin processes for higher efficiency.
+                            </p>
+                        </div>
+
+                        <div class="item">
+                            <div class="title">Community Manager — COD eSports Team</div>
+                            <div class="meta">
+                                <i class="fas fa-calendar-alt"></i>
+                                2022
+                            </div>
+                            <p>
+                                Handled online presence, coordinated community activities, and worked with competitive players to boost engagement and visibility.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2><i class="fas fa-graduation-cap" style="margin-right: 10px; color: var(--accent1);"></i>Education</h2>
+                    <div class="section-content">
+                        <div class="item">
+                            <div class="title">BA (English) — Mahabodhi Mahavidyalaya, Nalanda</div>
+                            <div class="meta">
+                                <i class="fas fa-calendar-alt"></i>
+                                2016 – 2019
+                            </div>
+                            <p>
+                                Focus on literature, language, and communication; seminars, debates, and analytical writing.
+                            </p>
+                        </div>
+
+                        <div class="item">
+                            <div class="title">Bachelor's in Library Science — Maulana Mazharul Haque University</div>
+                            <div class="meta">
+                                <i class="fas fa-calendar-alt"></i>
+                                2021 – 2022
+                            </div>
+                            <p>
+                                Digital libraries, information classification, research methods; project on digital libraries in education.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2><i class="fas fa-certificate" style="margin-right: 10px; color: var(--accent1);"></i>Certifications</h2>
+                    <div class="section-content">
+                        <div class="item">
+                            <div class="title">Diploma in Computer Applications — Nalanda Institute of Computer Education</div>
+                            <div class="meta">
+                                <i class="fas fa-award"></i>
+                                Certified
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2><i class="fas fa-cogs" style="margin-right: 10px; color: var(--accent1);"></i>Skills</h2>
+                    <div class="section-content">
+                        <div class="skills">
+                            <span class="tag">Community Engagement</span>
+                            <span class="tag">Digital Communication</span>
+                            <span class="tag">Event Planning</span>
+                            <span class="tag">Technical Support</span>
+                            <span class="tag">Creative Problem Solving</span>
+                        </div>
+                        
+                        <div class="skills">
+                            <span class="tag">Discord</span>
+                            <span class="tag">Reddit</span>
+                            <span class="tag">Facebook</span>
+                            <span class="tag">Twitter</span>
+                            <span class="tag">Instagram</span>
+                            <span class="tag">Canva</span>
+                            <span class="tag">Adobe Photoshop</span>
+                            <span class="tag">Twitch</span>
+                            <span class="tag">YouTube</span>
+                            <span class="tag">OBS</span>
+                            <span class="tag">Streamlabs</span>
+                            <span class="tag">Adobe Premiere</span>
+                            <span class="tag">DaVinci Resolve</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2><i class="fas fa-language" style="margin-right: 10px; color: var(--accent1);"></i>Languages</h2>
+                    <div class="section-content">
+                        <div class="skills">
+                            <span class="tag">English (Proficient)</span>
+                            <span class="tag">Hindi (Proficient)</span>
+                            <span class="tag">Korean (Beginner)</span>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
-        <div class="row">
-          <a class="pill" href="mailto:ve8rix@gmail.com">Email</a>
-          <span class="pill" style="pointer-events: none;">Community Expert</span>
-        </div>
-        <a class="btn" href="https://github.com/itsaaash/resumeforash/raw/refs/heads/main/ac591618.docx" download>Download CV</a>
-      </aside>
-      
-      <main>
-        <section class="card">
-          <h2>About Me</h2>
-          <p>Dynamic Community Manager with over 5 years of experience fostering engaging gaming communities and driving player satisfaction. Managed Discord servers with 15,000+ members and Facebook groups with 200,000+ members. Skilled at bridging players and dev teams, running events, and producing clear weekly creator and bug status reports.</p>
-        </section>
-        
-        <section class="card">
-          <h2>Work Experience</h2>
-          <div class="item">
-            <div class="title">Community Manager — NetEase Games</div>
-            <div class="meta">Dec 2017 – Jul 2022</div>
-            <p>Led community for Rules of Survival and Creative Destruction. Oversaw Discord 15k+ and Facebook 200k+ communities. Shipped weekly content creator reports, organized partnered events/tournaments, filed bug reports and suggestions, and tracked weekly implementation/fix status for stakeholders.</p>
-          </div>
-          <div class="item">
-            <div class="title">Computer Operator — Mahabodhi Mahavidyalaya, Nalanda</div>
-            <div class="meta">Dec 2022 – Present</div>
-            <p>Managed IT systems, supported students' digital needs, and streamlined admin processes for higher efficiency.</p>
-          </div>
-          <div class="item">
-            <div class="title">Community Manager — COD eSports Team</div>
-            <div class="meta">2022</div>
-            <p>Handled online presence, coordinated community activities, and worked with competitive players to boost engagement and visibility.</p>
-          </div>
-        </section>
-        
-        <section class="card">
-          <h2>Education</h2>
-          <div class="item">
-            <div class="title">BA (English) — Mahabodhi Mahavidyalaya, Nalanda</div>
-            <div class="meta">2016 – 2019</div>
-            <p>Focus on literature, language, and communication; seminars, debates, and analytical writing.</p>
-          </div>
-          <div class="item">
-            <div class="title">Bachelor's in Library Science — Maulana Mazharul Haque University</div>
-            <div class="meta">2021 – 2022</div>
-            <p>Digital libraries, information classification, research methods; project on digital libraries in education.</p>
-          </div>
-        </section>
-        
-        <section class="card">
-          <h2>Certifications</h2>
-          <div class="item">
-            <div class="title">Diploma in Computer Applications — Nalanda Institute of Computer Education</div>
-          </div>
-        </section>
-        
-        <section class="card">
-          <h2>Skills</h2>
-          <div class="skills">
-            <span class="tag">Community Engagement</span>
-            <span class="tag">Digital Communication</span>
-            <span class="tag">Event Planning</span>
-            <span class="tag">Technical Support</span>
-            <span class="tag">Creative Problem Solving</span>
-            <span class="tag">Discord</span>
-            <span class="tag">Reddit</span>
-            <span class="tag">Facebook</span>
-            <span class="tag">Twitter</span>
-            <span class="tag">Instagram</span>
-            <span class="tag">Canva</span>
-            <span class="tag">Adobe Photoshop</span>
-            <span class="tag">Twitch</span>
-            <span class="tag">YouTube</span>
-            <span class="tag">OBS</span>
-            <span class="tag">Streamlabs</span>
-            <span class="tag">Adobe Premiere</span>
-            <span class="tag">DaVinci Resolve</span>
-          </div>
-        </section>
-        
-        <section class="card">
-          <h2>Languages</h2>
-          <div class="skills">
-            <span class="tag">English (Proficient)</span>
-            <span class="tag">Hindi (Proficient)</span>
-            <span class="tag">Korean (Beginner)</span>
-          </div>
-        </section>
-      </main>
     </div>
-  </div>
-</body>
-</html>
-years of experience fostering engaging gaming communities and driving player satisfaction.
-            Managed Discord servers with 15,000+ members and Facebook groups with 200,000+ members. Skilled at bridging players and dev teams,
-            running events, and producing clear weekly creator and bug status reports.
-          </p>
-        </section>
-        <section class="card">
-          <h2>Work Experience</h2>
-          <div class="item">
-            <div class="title">Community Manager — NetEase Games</div>
-            <div class="meta">Dec 2017 – Jul 2022</div>
-            <p>
-              Led community for Rules of Survival and Creative Destruction. Oversaw Discord 15k+ and Facebook 200k+ communities.
-              Shipped weekly content‑creator reports (content types, sentiment, support actions), organized partnered events/tournaments,
-              filed bug reports and suggestions, and tracked weekly implementation/fix status for stakeholders.
-            </p>
-          </div>
-          <div class="item">
-            <div class="title">Computer Operator — Mahabodhi Mahavidyalaya, Nalanda</div>
-            <div class="meta">Dec 2022 – Present</div>
-            <p>Managed IT systems, supported students’ digital needs, and streamlined admin processes for higher efficiency.</p>
-          </div>
-          <div class="item">
-            <div class="title">Community Manager — COD eSports Team</div>
-            <div class="meta">2022</div>
-            <p>Handled online presence, coordinated community activities, and worked with competitive players to boost engagement and visibility.</p>
-          </div>
-        </section>
-        <section class="card">
-          <h2>Education</h2>
-          <div class="item">
-            <div class="title">BA (English) — Mahabodhi Mahavidyalaya, Nalanda</div>
-            <div class="meta">2016 – 2019</div>
-            <p>Focus on literature, language, and communication; seminars, debates, and analytical writing.</p>
-          </div>
-          <div class="item">
-            <div class="title">Bachelor’s in Library Science — Maulana Mazharul Haque University</div>
-            <div class="meta">2021 – 2022</div>
-            <p>Digital libraries, information classification, research methods; project on digital libraries in education.</p>
-          </div>
-        </section>
-        <section class="card">
-          <h2>Certifications</h2>
-          <div class="item">
-            <div class="title">Diploma in Computer Applications — Nalanda Institute of Computer Education</div>
-          </div>
-        </section>
-        <section class="card">
-          <h2>Skills</h2>
-          <div class="skills" style="margin-bottom:8px">
-            <span class="tag">Community Engagement</span>
-            <span class="tag">Digital Communication</span>
-            <span class="tag">Event Planning</span>
-            <span class="tag">Technical Support</span>
-            <span class="tag">Creative Problem Solving</span>
-          </div>
-          <div class="skills">
-            <span class="tag">Discord</span>
-            <span class="tag">Reddit</span>
-            <span class="tag">Facebook</span>
-            <span class="tag">Twitter</span>
-            <span class="tag">Instagram</span>
-            <span class="tag">Canva</span>
-            <span class="tag">Adobe Photoshop</span>
-            <span class="tag">Twitch</span>
-            <span class="tag">YouTube</span>
-            <span class="tag">OBS</span>
-            <span class="tag">Streamlabs</span>
-            <span class="tag">Adobe Premiere</span>
-            <span class="tag">DaVinci Resolve</span>
-          </div>
-        </section>
-        <section class="card">
-          <h2>Languages</h2>
-          <div class="skills">
-            <span class="tag">English (Proficient)</span>
-            <span class="tag">Hindi (Proficient)</span>
-            <span class="tag">Korean (Beginner)</span>
-          </div>
-        </section>
-      </main>
-    </div>
-  </div>
-</body>
-</html>
-nload CV
-      </a>
-    </aside>
-    
-    <main class="main-content">
-      <section class="section">
-        <h2>About Me</h2>
-        <p>Dynamic Community Manager with over 5 years of experience fostering engaging gaming communities and driving player satisfaction. Skilled in building bridges between development teams and players through multi-platform community management, event planning, and strategic communication. Successfully managed Discord servers with 15,000+ members and Facebook groups with 200,000+ members.</p>
-      </section>
-      
-      <section class="section">
-        <h2>Work Experience</h2>
-        
-        <div class="experience-item">
-          <div class="item-title">Community Manager</div>
-          <div class="item-company">NetEase Games</div>
-          <div class="item-period">Dec 2017 - July 2022</div>
-          <div class="item-description">
-            Managed community engagement for battle royale games like Rules of Survival and Creative Destruction. Oversaw Discord servers with 15,000+ members and Facebook groups with 200,000+ members. Produced weekly content creator reports analyzing creator content and satisfaction, supported creators with partnered events/tournaments, and created regular bug reports with suggestions. Tracked weekly status on implementations or fixes and provided clear updates to the team.
-          </div>
-        </div>
-        
-        <div class="experience-item">
-          <div class="item-title">Computer Operator</div>
-          <div class="item-company">Mahabodhi Mahavidyalaya, Nalanda</div>
-          <div class="item-period">Dec 2022 - Present</div>
-          <div class="item-description">
-            Managed complex IT systems, supported students' digital needs, and created streamlined administrative processes to boost institutional efficiency beyond routine computer operations.
-          </div>
-        </div>
-        
-        <div class="experience-item">
-          <div class="item-title">Community Manager</div>
-          <div class="item-company">COD eSports Team</div>
-          <div class="item-period">2022</div>
-          <div class="item-description">
-            Managed online presence, coordinated community activities, and worked with competitive players to boost engagement and team visibility.
-          </div>
-        </div>
-      </section>
-      
-      <section class="section">
-        <h2>Education</h2>
-        
-        <div class="education-item">
-          <div class="item-title">Bachelor's Degree in Arts (English)</div>
-          <div class="item-company">Mahabodhi Mahavidyalaya, Nalanda</div>
-          <div class="item-period">2016 - 2019</div>
-          <div class="item-description">
-            Focused on English literature, language structure, and communication. Developed strong analytical and written communication skills through coursework and seminars. Participated in college-level debates and presentations.
-          </div>
-        </div>
-        
-        <div class="education-item">
-          <div class="item-title">Bachelor's Degree in Library Science</div>
-          <div class="item-company">Maulana Mazharul Haque University</div>
-          <div class="item-period">2021 - 2022</div>
-          <div class="item-description">
-            Specialized in organizing and managing large-scale information systems and digital libraries. Gained expertise in research methods, information classification, and digital cataloging. Completed a research project on digital libraries in educational institutions.
-          </div>
-        </div>
-      </section>
-      
-      <section class="section">
-        <h2>Certifications</h2>
-        <div class="experience-item">
-          <div class="item-title">Diploma in Computer Applications</div>
-          <div class="item-company">Nalanda Institute of Computer Education</div>
-          <div class="item-description">
-            Comprehensive computer applications program covering fundamentals, Microsoft Office, internet usage, and basic programming concepts.
-          </div>
-        </div>
-      </section>
-      
-      <section class="section">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Core Competencies</h3>
-            <div class="skill-list">
-              <span class="skill-tag">Community Engagement</span>
-              <span class="skill-tag">Digital Communication</span>
-              <span class="skill-tag">Event Planning</span>
-              <span class="skill-tag">Technical Support</span>
-              <span class="skill-tag">Creative Problem Solving</span>
-            </div>
-          </div>
-          
-          <div class="skill-category">
-            <h3>Technical Proficiencies</h3>
-            <div class="skill-list">
-              <span class="skill-tag">Discord</span>
-              <span class="skill-tag">Reddit</span>
-              <span class="skill-tag">Facebook</span>
-              <span class="skill-tag">Twitter</span>
-              <span class="skill-tag">Instagram</span>
-              <span class="skill-tag">Canva</span>
-              <span class="skill-tag">Adobe Photoshop</span>
-              <span class="skill-tag">Twitch</span>
-              <span class="skill-tag">YouTube</span>
-              <span class="skill-tag">OBS</span>
-              <span class="skill-tag">Streamlabs</span>
-              <span class="skill-tag">Adobe Premiere</span>
-              <span class="skill-tag">DaVinci Resolve</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="section">
-        <h2>Languages</h2>
-        <div class="languages">
-          <div class="language-item">English (Proficient)</div>
-          <div class="language-item">Hindi (Proficient)</div>
-          <div class="language-item">Korean (Beginner)</div>
-        </div>
-      </section>
-    </main>
-  </div>
-</body>
-</html>
-      height: fit-content;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      backdrop-filter: blur(10px);
-    }
-    
-    .profile-section {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    
-    .profile-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: linear-gradient(45deg, #667eea, #764ba2);
-      margin: 0 auto 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      color: white;
-      font-weight: 700;
-    }
-    
-    .name {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #2c3e50;
-    }
-    
-    .title {
-      font-size: 1rem;
-      color: #7f8c8d;
-      margin-bottom: 0.3rem;
-    }
-    
-    .location {
-      font-size: 0.9rem;
-      color: #95a5a6;
-    }
-    
-    .contact-info {
-      margin: 2rem 0;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-    
-    .contact-item:hover {
-      background: rgba(52, 152, 219, 0.1);
-    }
-    
-    .contact-item i {
-      width: 20px;
-      color: #3498db;
-      margin-right: 1rem;
-    }
-    
-    .download-btn {
-      background: linear-gradient(45deg, #3498db, #2980b9);
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-      width: 100%;
-      font-size: 1rem;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-    }
-    
-    .download-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
-    }
-    
-    .main-content {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 20px;
-      padding: 3rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      backdrop-filter: blur(10px);
-    }
-    
-    .section {
-      margin-bottom: 3rem;
-    }
-    
-    .section h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #2c3e50;
-      margin-bottom: 1.5rem;
-      position: relative;
-      padding-bottom: 0.5rem;
-    }
-    
-    .section h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: linear-gradient(45deg, #3498db, #2980b9);
-      border-radius: 2px;
-    }
-    
-    .experience-item, .education-item {
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      border-left: 4px solid #3498db;
-      background: rgba(52, 152, 219, 0.05);
-      border-radius: 0 10px 10px 0;
-    }
-    
-    .item-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #2c3e50;
-      margin-bottom: 0.5rem;
-    }
-    
-    .item-company {
-      color: #3498db;
-      font-weight: 500;
-      margin-bottom: 0.3rem;
-    }
-    
-    .item-period {
-      color: #7f8c8d;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-    
-    .item-description {
-      line-height: 1.6;
-      color: #555;
-    }
-    
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-    }
-    
-    .skill-category {
-      background: rgba(52, 152, 219, 0.05);
-      padding: 1.5rem;
-      border-radius: 12px;
-      border-top: 4px solid #3498db;
-    }
-    
-    .skill-category h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #2c3e50;
-      margin-bottom: 1rem;
-    }
-    
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    
-    .skill-tag {
-      background: #3498db;
-      color: white;
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-    
-    .languages {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    
-    .language-item {
-      background: linear-gradient(45deg, #667eea, #764ba2);
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 25px;
-      font-weight: 500;
-    }
-    
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 1rem;
-      }
-      
-      .sidebar, .main-content {
-        padding: 2rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <aside class="sidebar">
-      <div class="profile-section">
-        <div class="profile-photo">AR</div>
-        <h1 class="name">Ashish Ranjan</h1>
-        <p class="title">Community Manager</p>
-        <p class="location">Bihar Sharif, India</p>
-      </div>
-      
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <span>ve8rix@gmail.com</span>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-users"></i>
-          <span>Community Expert</span>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-chart-line"></i>
-          <span>200K+ Community</span>
-        </div>
-      </div>
-      
-      <a href="https://github.com/itsaaash/resumeforash/raw/refs/heads/main/ac591618.docx" class="download-btn" download>
-        <i class="fas fa-download"></i> Download CV
-      </a>
-    </aside>
-    
-    <main class="main-content">
-      <section class="section">
-        <h2>About Me</h2>
-        <p>Dynamic Community Manager with over 5 years of experience fostering engaging gaming communities and driving player satisfaction. Skilled in building bridges between development teams and players through multi-platform community management, event planning, and strategic communication. Successfully managed Discord servers with 15,000+ members and Facebook groups with 200,000+ members.</p>
-      </section>
-      
-      <section class="section">
-        <h2>Work Experience</h2>
-        
-        <div class="experience-item">
-          <div class="item-title">Community Manager</div>
-          <div class="item-company">NetEase Games</div>
-          <div class="item-period">Dec 2017 - July 2022</div>
-          <div class="item-description">
-            Managed community engagement for battle royale games like Rules of Survival and Creative Destruction. Oversaw Discord servers with 15,000+ members and Facebook groups with 200,000+ members. Produced weekly content creator reports analyzing creator content and satisfaction, supported creators with partnered events/tournaments, and created regular bug reports with suggestions. Tracked weekly status on implementations or fixes and provided clear updates to the team.
-          </div>
-        </div>
-        
-        <div class="experience-item">
-          <div class="item-title">Computer Operator</div>
-          <div class="item-company">Mahabodhi Mahavidyalaya, Nalanda</div>
-          <div class="item-period">Dec 2022 - Present</div>
-          <div class="item-description">
-            Managed complex IT systems, supported students' digital needs, and created streamlined administrative processes to boost institutional efficiency beyond routine computer operations.
-          </div>
-        </div>
-        
-        <div class="experience-item">
-          <div class="item-title">Community Manager</div>
-          <div class="item-company">COD eSports Team</div>
-          <div class="item-period">2022</div>
-          <div class="item-description">
-            Managed online presence, coordinated community activities, and worked with competitive players to boost engagement and team visibility.
-          </div>
-        </div>
-      </section>
-      
-      <section class="section">
-        <h2>Education</h2>
-        
-        <div class="education-item">
-          <div class="item-title">Bachelor's Degree in Arts (English)</div>
-          <div class="item-company">Mahabodhi Mahavidyalaya, Nalanda</div>
-          <div class="item-period">2016 - 2019</div>
-          <div class="item-description">
-            Focused on English literature, language structure, and communication. Developed strong analytical and written communication skills through coursework and seminars. Participated in college-level debates and presentations.
-          </div>
-        </div>
-        
-        <div class="education-item">
-          <div class="item-title">Bachelor's Degree in Library Science</div>
-          <div class="item-company">Maulana Mazharul Haque University</div>
-          <div class="item-period">2021 - 2022</div>
-          <div class="item-description">
-            Specialized in organizing and managing large-scale information systems and digital libraries. Gained expertise in research methods, information classification, and digital cataloging. Completed a research project on digital libraries in educational institutions.
-          </div>
-        </div>
-      </section>
-      
-      <section class="section">
-        <h2>Certifications</h2>
-        <div class="experience-item">
-          <div class="item-title">Diploma in Computer Applications</div>
-          <div class="item-company">Nalanda Institute of Computer Education</div>
-          <div class="item-description">
-            Comprehensive computer applications program covering fundamentals, Microsoft Office, internet usage, and basic programming concepts.
-          </div>
-        </div>
-      </section>
-      
-      <section class="section">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Core Competencies</h3>
-            <div class="skill-list">
-              <span class="skill-tag">Community Engagement</span>
-              <span class="skill-tag">Digital Communication</span>
-              <span class="skill-tag">Event Planning</span>
-              <span class="skill-tag">Technical Support</span>
-              <span class="skill-tag">Creative Problem Solving</span>
-            </div>
-          </div>
-          
-          <div class="skill-category">
-            <h3>Technical Proficiencies</h3>
-            <div class="skill-list">
-              <span class="skill-tag">Discord</span>
-              <span class="skill-tag">Reddit</span>
-              <span class="skill-tag">Facebook</span>
-              <span class="skill-tag">Twitter</span>
-              <span class="skill-tag">Instagram</span>
-              <span class="skill-tag">Canva</span>
-              <span class="skill-tag">Adobe Photoshop</span>
-              <span class="skill-tag">Twitch</span>
-              <span class="skill-tag">YouTube</span>
-              <span class="skill-tag">OBS</span>
-              <span class="skill-tag">Streamlabs</span>
-              <span class="skill-tag">Adobe Premiere</span>
-              <span class="skill-tag">DaVinci Resolve</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="section">
-        <h2>Languages</h2>
-        <div class="languages">
-          <div class="language-item">English (Proficient)</div>
-          <div class="language-item">Hindi (Proficient)</div>
-          <div class="language-item">Korean (Beginner)</div>
-        </div>
-      </section>
-    </main>
-  </div>
-</body>
-</html>
-      height: fit-content;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      backdrop-filter: blur(10px);
-    }
-    
-    .profile-section {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    
-    .profile-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: linear-gradient(45deg, #667eea, #764ba2);
-      margin: 0 auto 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      color: white;
-      font-weight: 700;
-    }
-    
-    .name {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: #2c3e50;
-    }
-    
-    .title {
-      font-size: 1rem;
-      color: #7f8c8d;
-      margin-bottom: 0.3rem;
-    }
-    
-    .location {
-      font-size: 0.9rem;
-      color: #95a5a6;
-    }
-    
-    .contact-info {
-      margin: 2rem 0;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-    
-    .contact-item:hover {
-      background: rgba(52, 152, 219, 0.1);
-    }
-    
-    .contact-item i {
-      width: 20px;
-      color: #3498db;
-      margin-right: 1rem;
-    }
-    
-    .download-btn {
-      background: linear-gradient(45deg, #3498db, #2980b9);
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-      width: 100%;
-      font-size: 1rem;
-    }
-    
-    .download-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
-    }
-    
-    .main-content {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 20px;
-      padding: 3rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      backdrop-filter: blur(10px);
-    }
-    
-    .section {
-      margin-bottom: 3rem;
-    }
-    
-    .section h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #2c3e50;
-      margin-bottom: 1.5rem;
-      position: relative;
-      padding-bottom: 0.5rem;
-    }
-    
-    .section h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: linear-gradient(45deg, #3498db, #2980b9);
-      border-radius: 2px;
-    }
-    
-    .experience-item, .education-item {
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      border-left: 4px solid #3498db;
-      background: rgba(52, 152, 219, 0.05);
-      border-radius: 0 10px 10px 0;
-    }
-    
-    .item-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #2c3e50;
-      margin-bottom: 0.5rem;
-    }
-    
-    .item-company {
-      color: #3498db;
-      font-weight: 500;
-      margin-bottom: 0.3rem;
-    }
-    
-    .item-period {
-      color: #7f8c8d;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-    
-    .item-description {
-      line-height: 1.6;
-      color: #555;
-    }
-    
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-    }
-    
-    .skill-category {
-      background: rgba(52, 152, 219, 0.05);
-      padding: 1.5rem;
-      border-radius: 12px;
-      border-top: 4px solid #3498db;
-    }
-    
-    .skill-category h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #2c3e50;
-      margin-bottom: 1rem;
-    }
-    
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    
-    .skill-tag {
-      background: #3498db;
-      color: white;
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-    
-    .languages {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    
-    .language-item {
-      background: linear-gradient(45deg, #667eea, #764ba2);
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 25px;
-      font-weight: 500;
-    }
-    
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 1rem;
-      }
-      
-      .sidebar, .main-content {
-        padding: 2rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <aside class="sidebar">
-      <div class="profile-section">
-        <div class="profile-photo">AR</div>
-        <h1 class="name">Ashish Ranjan</h1>
-        <p class="title">Community Manager</p>
-        <p class="location">Bihar Sharif, India</p>
-      </div>
-      
-      <div class="contact-info">
-        <div class="contact-item">
-          <i class="fas fa-envelope"></i>
-          <span>ve8rix@gmail.com</span>
-        </div>
-        <div class="contact-item">
-          <i class="fab fa-discord"></i>
-          <span>Discord Expert</span>
-        </div>
-        <div class="contact-item">
-          <i class="fas fa-users"></i>
-          <span>200K+ Community</span>
-        </div>
-      </div>
-      
-      <button class="download-btn">
-        <i class="fas fa-download"></i> Download CV
-      </button>
-    </aside>
-    
-    <main class="main-content">
-      <section class="section">
-        <h2>About Me</h2>
-        <p>Dynamic Community Manager with over 5 years of experience fostering engaging gaming communities and driving player satisfaction. Skilled in building bridges between development teams and players through multi-platform community management, event planning, and strategic communication. Successfully managed Discord servers with 15,000+ members and Facebook groups with 200,000+ members.</p>
-      </section>
-      
-      <section class="section">
-        <h2>Work Experience</h2>
-        
-        <div class="experience-item">
-          <div class="item-title">Community Manager</div>
-          <div class="item-company">NetEase Games</div>
-          <div class="item-period">Dec 2017 - July 2022</div>
-          <div class="item-description">
-            Managed community engagement for battle royale games like Rules of Survival and Creative Destruction. Oversaw Discord servers with 15,000+ members and Facebook groups with 200,000+ members. Produced weekly content creator reports, organized events, and tracked bug implementations.
-          </div>
-        </div>
-        
-        <div class="experience-item">
-          <div class="item-title">Computer Operator</div>
-          <div class="item-company">Mahabodhi Mahavidyalaya, Nalanda</div>
-          <div class="item-period">Dec 2022 - Present</div>
-          <div class="item-description">
-            Managed complex IT systems, supported students' digital needs, and created streamlined administrative processes to boost institutional efficiency.
-          </div>
-        </div>
-        
-        <div class="experience-item">
-          <div class="item-title">Community Manager</div>
-          <div class="item-company">COD eSports Team</div>
-          <div class="item-period">2022</div>
-          <div class="item-description">
-            Managed online presence, coordinated community activities, and worked with competitive players to boost engagement and team visibility.
-          </div>
-        </div>
-      </section>
-      
-      <section class="section">
-        <h2>Education</h2>
-        
-        <div class="education-item">
-          <div class="item-title">Bachelor's Degree in Arts (English)</div>
-          <div class="item-company">Mahabodhi Mahavidyalaya, Nalanda</div>
-          <div class="item-period">2016 - 2019</div>
-        </div>
-        
-        <div class="education-item">
-          <div class="item-title">Bachelor's Degree in Library Science</div>
-          <div class="item-company">Maulana Mazharul Haque University</div>
-          <div class="item-period">2021 - 2022</div>
-        </div>
-      </section>
-      
-      <section class="section">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Core Competencies</h3>
-            <div class="skill-list">
-              <span class="skill-tag">Community Engagement</span>
-              <span class="skill-tag">Digital Communication</span>
-              <span class="skill-tag">Event Planning</span>
-              <span class="skill-tag">Technical Support</span>
-            </div>
-          </div>
-          
-          <div class="skill-category">
-            <h3>Technical Proficiencies</h3>
-            <div class="skill-list">
-              <span class="skill-tag">Discord</span>
-              <span class="skill-tag">Reddit</span>
-              <span class="skill-tag">Adobe Premiere</span>
-              <span class="skill-tag">DaVinci Resolve</span>
-              <span class="skill-tag">OBS</span>
-              <span class="skill-tag">Streamlabs</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="section">
-        <h2>Languages</h2>
-        <div class="languages">
-          <div class="language-item">English (Proficient)</div>
-          <div class="language-item">Hindi (Proficient)</div>
-          <div class="language-item">Korean (Beginner)</div>
-        </div>
-      </section>
-    </main>
-  </div>
 </body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ashish Ranjan - Community Manager</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     * {
@@ -15,9 +15,10 @@
     
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+      background: #000000;
       min-height: 100vh;
-      color: #333;
+      color: #ffffff;
+      line-height: 1.6;
     }
     
     .container {
@@ -31,9 +32,387 @@
     }
     
     .sidebar {
-      background: rgba(255, 255, 255, 0.95);
+      background: #111111;
       border-radius: 20px;
       padding: 2.5rem;
+      height: fit-content;
+      box-shadow: 0 10px 30px rgba(255,255,255,0.05);
+      border: 1px solid #222222;
+    }
+    
+    .profile-section {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: white;
+      font-weight: 700;
+    }
+    
+    .name {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+    
+    .title {
+      font-size: 1rem;
+      color: #cccccc;
+      margin-bottom: 0.3rem;
+    }
+    
+    .location {
+      font-size: 0.9rem;
+      color: #999999;
+    }
+    
+    .contact-info {
+      margin: 2rem 0;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 8px;
+      transition: background 0.3s;
+      color: #ffffff;
+    }
+    
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .contact-item i {
+      width: 20px;
+      color: #667eea;
+      margin-right: 1rem;
+    }
+    
+    .download-btn {
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+      font-size: 1rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    }
+    
+    .main-content {
+      background: #111111;
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: 0 10px 30px rgba(255,255,255,0.05);
+      border: 1px solid #222222;
+      color: #ffffff;
+    }
+    
+    .section {
+      margin-bottom: 3rem;
+    }
+    
+    .section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
+    
+    .experience-item, .education-item {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-left: 4px solid #667eea;
+      background: #1a1a1a;
+      border-radius: 0 10px 10px 0;
+      border: 1px solid #333333;
+    }
+    
+    .item-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+    
+    .item-company {
+      color: #667eea;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+    
+    .item-period {
+      color: #cccccc;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    
+    .item-description {
+      line-height: 1.6;
+      color: #dddddd;
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .skill-category {
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border-top: 4px solid #667eea;
+      border: 1px solid #333333;
+    }
+    
+    .skill-category h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+    
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .skill-tag {
+      background: #667eea;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    .languages {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .language-item {
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      font-weight: 500;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem;
+      }
+      
+      .sidebar, .main-content {
+        padding: 2rem;
+      }
+      
+      .profile-photo {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+      }
+      
+      .name {
+        font-size: 1.5rem;
+      }
+      
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile-section">
+        <div class="profile-photo">AR</div>
+        <h1 class="name">Ashish Ranjan</h1>
+        <p class="title">Community Manager</p>
+        <p class="location">Bihar Sharif, India</p>
+      </div>
+      
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>ve8rix@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-users"></i>
+          <span>Community Expert</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-chart-line"></i>
+          <span>200K+ Community</span>
+        </div>
+      </div>
+      
+      <a href="https://github.com/itsaaash/resumeforash/raw/refs/heads/main/ac591618.docx" class="download-btn" download>
+        <i class="fas fa-download"></i> Download CV
+      </a>
+    </aside>
+    
+    <main class="main-content">
+      <section class="section">
+        <h2>About Me</h2>
+        <p>Dynamic Community Manager with over 5 years of experience fostering engaging gaming communities and driving player satisfaction. Skilled in building bridges between development teams and players through multi-platform community management, event planning, and strategic communication. Successfully managed Discord servers with 15,000+ members and Facebook groups with 200,000+ members.</p>
+      </section>
+      
+      <section class="section">
+        <h2>Work Experience</h2>
+        
+        <div class="experience-item">
+          <div class="item-title">Community Manager</div>
+          <div class="item-company">NetEase Games</div>
+          <div class="item-period">Dec 2017 - July 2022</div>
+          <div class="item-description">
+            Managed community engagement for battle royale games like Rules of Survival and Creative Destruction. Oversaw Discord servers with 15,000+ members and Facebook groups with 200,000+ members. Produced weekly content creator reports analyzing creator content and satisfaction, supported creators with partnered events/tournaments, and created regular bug reports with suggestions. Tracked weekly status on implementations or fixes and provided clear updates to the team.
+          </div>
+        </div>
+        
+        <div class="experience-item">
+          <div class="item-title">Computer Operator</div>
+          <div class="item-company">Mahabodhi Mahavidyalaya, Nalanda</div>
+          <div class="item-period">Dec 2022 - Present</div>
+          <div class="item-description">
+            Managed complex IT systems, supported students' digital needs, and created streamlined administrative processes to boost institutional efficiency beyond routine computer operations.
+          </div>
+        </div>
+        
+        <div class="experience-item">
+          <div class="item-title">Community Manager</div>
+          <div class="item-company">COD eSports Team</div>
+          <div class="item-period">2022</div>
+          <div class="item-description">
+            Managed online presence, coordinated community activities, and worked with competitive players to boost engagement and team visibility.
+          </div>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2>Education</h2>
+        
+        <div class="education-item">
+          <div class="item-title">Bachelor's Degree in Arts (English)</div>
+          <div class="item-company">Mahabodhi Mahavidyalaya, Nalanda</div>
+          <div class="item-period">2016 - 2019</div>
+          <div class="item-description">
+            Focused on English literature, language structure, and communication. Developed strong analytical and written communication skills through coursework and seminars. Participated in college-level debates and presentations.
+          </div>
+        </div>
+        
+        <div class="education-item">
+          <div class="item-title">Bachelor's Degree in Library Science</div>
+          <div class="item-company">Maulana Mazharul Haque University</div>
+          <div class="item-period">2021 - 2022</div>
+          <div class="item-description">
+            Specialized in organizing and managing large-scale information systems and digital libraries. Gained expertise in research methods, information classification, and digital cataloging. Completed a research project on digital libraries in educational institutions.
+          </div>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2>Certifications</h2>
+        <div class="experience-item">
+          <div class="item-title">Diploma in Computer Applications</div>
+          <div class="item-company">Nalanda Institute of Computer Education</div>
+          <div class="item-description">
+            Comprehensive computer applications program covering fundamentals, Microsoft Office, internet usage, and basic programming concepts.
+          </div>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Core Competencies</h3>
+            <div class="skill-list">
+              <span class="skill-tag">Community Engagement</span>
+              <span class="skill-tag">Digital Communication</span>
+              <span class="skill-tag">Event Planning</span>
+              <span class="skill-tag">Technical Support</span>
+              <span class="skill-tag">Creative Problem Solving</span>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h3>Technical Proficiencies</h3>
+            <div class="skill-list">
+              <span class="skill-tag">Discord</span>
+              <span class="skill-tag">Reddit</span>
+              <span class="skill-tag">Facebook</span>
+              <span class="skill-tag">Twitter</span>
+              <span class="skill-tag">Instagram</span>
+              <span class="skill-tag">Canva</span>
+              <span class="skill-tag">Adobe Photoshop</span>
+              <span class="skill-tag">Twitch</span>
+              <span class="skill-tag">YouTube</span>
+              <span class="skill-tag">OBS</span>
+              <span class="skill-tag">Streamlabs</span>
+              <span class="skill-tag">Adobe Premiere</span>
+              <span class="skill-tag">DaVinci Resolve</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2>Languages</h2>
+        <div class="languages">
+          <div class="language-item">English (Proficient)</div>
+          <div class="language-item">Hindi (Proficient)</div>
+          <div class="language-item">Korean (Beginner)</div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
       height: fit-content;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       backdrop-filter: blur(10px);

@@ -153,6 +153,100 @@
             margin-top: 4px;
         }
 
+        /* Social Links Styles */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-top: 8px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--muted);
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-link:hover::before {
+            opacity: 1;
+        }
+
+        .social-link:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: var(--text);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Specific social platform colors on hover */
+        .social-link.linkedin:hover {
+            background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
+            border-color: #0077b5;
+            color: white;
+            box-shadow: 0 8px 25px rgba(0, 119, 181, 0.3);
+        }
+
+        .social-link.twitter:hover {
+            background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
+            border-color: #1da1f2;
+            color: white;
+            box-shadow: 0 8px 25px rgba(29, 161, 242, 0.3);
+        }
+
+        .social-link.discord:hover {
+            background: linear-gradient(135deg, #5865f2 0%, #4752c4 100%);
+            border-color: #5865f2;
+            color: white;
+            box-shadow: 0 8px 25px rgba(88, 101, 242, 0.3);
+        }
+
+        .social-link.instagram:hover {
+            background: linear-gradient(135deg, #e4405f 0%, #833ab4 50%, #f56040 100%);
+            border-color: #e4405f;
+            color: white;
+            box-shadow: 0 8px 25px rgba(228, 64, 95, 0.3);
+        }
+
+        .social-link.facebook:hover {
+            background: linear-gradient(135deg, #1877f2 0%, #166fe5 100%);
+            border-color: #1877f2;
+            color: white;
+            box-shadow: 0 8px 25px rgba(24, 119, 242, 0.3);
+        }
+
+        .social-link i {
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-link:hover i {
+            transform: scale(1.1);
+        }
+
         .contact-row {
             display: flex;
             gap: 12px;
@@ -389,6 +483,10 @@
             .pill {
                 justify-content: center;
             }
+
+            .social-links {
+                justify-content: center;
+            }
         }
 
         @media (max-width: 480px) {
@@ -411,6 +509,15 @@
             .tag {
                 padding: 8px 12px;
                 font-size: 12px;
+            }
+
+            .social-link {
+                width: 40px;
+                height: 40px;
+            }
+
+            .social-link i {
+                font-size: 16px;
             }
         }
 
@@ -455,6 +562,45 @@
                             Bihar Sharif, India
                         </div>
                     </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ashish-ranjan-74a8b3186" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-link linkedin"
+                       title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://twitter.com/itsaaashish" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-link twitter"
+                       title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://discord.com/users/itsaaash" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-link discord"
+                       title="Discord: itsaaash">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://instagram.com/whos_ash" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-link instagram"
+                       title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/iamashishranjan" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-link facebook"
+                       title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
                 </div>
                 
                 <div class="contact-row">
